@@ -1,6 +1,6 @@
-FROM python:3.11.4-alpine
+FROM python:3.8-slim-buster
 
-RUN apk update  && apk add --no-cache aws-cli
+RUN apt update -y && apt install awscli -y
 WORKDIR /app
 
 COPY . /app
@@ -8,6 +8,6 @@ COPY . /app
 RUN pip install -r requirements.txt
 RUN pip install --upgrade accelerate
 RUN pip uninstall -y transformers accelerate
-RUN pip instaclsll transformers accelerate
+RUN pip install transformers accelerate
 
 CMD ["python3", "app.py"]
