@@ -1,6 +1,6 @@
 FROM python:3.11.4-alpine
 
-RUN apk update  && apk install awscli
+RUN apk update  && apk add --no-cache aws-cli
 WORKDIR /app
 
 COPY . /app
