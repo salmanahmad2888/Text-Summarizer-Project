@@ -7,6 +7,7 @@ from textSummarizer.pipeline.stage05_model_evaluation import ModelEvaluationTrai
 
 logger.info("Main.py: Pipeline started...")
 
+
 STAGE_NAME = 'DATA INGESTION STAGE'
 
 try:
